@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<label for="no">Enter the no:-</label>
+	<input type="text" id="no"/>
+	<label for="result">reverse</label>
+	<input type="text" id="result"/>
+	<input type="button" onclick="rev();" value="click"/>
+	
+<script>
+function rev()
+{ 
+var n,m,k=0;
+	n=Number(document.getElementById("no").value);
+	
+	while(n>0)
+	{
+	m=n%10;
+	k=k*10+m;
+	n=Math.floor(n/10);
+	alert(n);
+	}
+	document.getElementById("result").value=k;
+}
+</script>
+</body>
+</html>

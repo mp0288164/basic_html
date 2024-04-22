@@ -1,0 +1,58 @@
+<html>
+<body>
+<p id="result"></p>
+
+<label for="r" >Rollno:-</label>
+<input type="text"  id="r" class="txt"/><br><br>
+
+<label for="n">Name:-</label>
+<input type="text"  id="n" class="txt"/><br><br>
+
+<label for="p">Physics:-</label>
+<input type="text"  id="p" class="txt"/><br><br>
+
+<label for="c">chemistry:-</label>
+<input type="text"  id="c" class="txt"/><br><br>
+
+<label for="m">Mathemetics:-</label>
+<input type="text"  id="m" class="txt"/><br><br>
+
+<label for="t">Total:-</label>
+<input type="text"  id="t" class="txt"/><br><br>
+
+<script>
+class student
+	{
+	constructor(r,str,p,c,m)
+	{
+		this.rollno=r;
+		this.name=str;
+		this.phy=p;
+		this.che=c;
+		this.maths=m;
+	}
+	total()
+	{
+	return this.total=this.phy+this.che+this.maths;
+	}
+}
+const stu=new student(1001,"anil",56,90,87);
+
+document.getElementById("result").innerHTML="Rollno:-"+stu.rollno+"<br>"
+					+"name:-"+stu.name+"<br>"
+					+"physics:-"+stu.phy+"<br>"
+					+"chemistry:-"+stu.che+"<br>"
+					+"Maths:-"+stu.maths+"<br>"
+					+"Total:-"+stu.total()
+
+document.getElementById("r").value=stu.rollno
+document.getElementById("n").value=stu.name
+document.getElementById("p").value=stu.phy
+document.getElementById("c").value=stu.che
+document.getElementById("m").value=stu.maths
+document.getElementById("t").value=stu.total()
+
+</script>
+
+</body>
+</html>	

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.text
+{
+ border:20px solid red;
+background-color:blue;
+color:white;
+padding:20px;
+margin:12px;
+}
+</style>
+<script>
+function greatest()
+{
+	a=document.getElementById("f1").value;
+	b=document.getElementById("s1").value;
+	if (a>b)
+	{
+	document.getElementById("r1").value=a;
+	}
+	else
+	{
+	document.getElementById("r1").value=b;
+	}
+}
+</script>
+</head>
+<body>
+	<label for="f1">Enter the First number:-</label>
+	<input type="text" id="f1" class="text"/><br><br>
+	<label for="s1">Enter the Second number</label>
+	<input type="text" id="s1" class="text"/><br><br>
+	<label for="r1">Result</label>
+	<input type="text" id="r1" class="text"/><br><br>
+	<input type="submit" value="submit" onclick="greatest()" />
+</body>
+</html>

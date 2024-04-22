@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<body>
+<h2>HTML Iframes</h2>
+<p>you can use heightand weight attribute to specify the size of the iframe:</p>
+<iframe src="class.html" height="200" width="300" title="iframe Example"></iframe>
+
+<!--by default  an iframe has a border  around it.
+To remove the border, add the style attribute and use the css border property:-->
+<iframe src="header.html" style="border:none;" title="iframe example"></iframe>
+
+<!-- with css, you can also change the size,style and color of the iframe's border:-->
+<iframe src="header.html" style="border: 6px dotted deeppink;" title="Iframe Example"></iframe>
+
+<!--an iframe can be used the target attribute  frame for a link.
+the target attribute of the link must refer to the name attribute of the iframe:-->
+<iframe src="class.html" name="iframe_a" title="iframe example"></iframe>
+<p><a herf="https://www.gmail.com" target="iframe_a">gmail.com</a></p>
+</body>
+</html>
+<!-- the html <iframe> tag specifies an inline frame.-->

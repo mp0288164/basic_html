@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+label<for="no"></label>
+<input type="text" id="no" /><br><br>
+<label for="result"></label>
+<input type="text" id="result"/><br><br>
+<input type="button" onclick="sum();" value="click">
+</body>
+<script>
+function sum()
+{
+var n,m,k=0;
+n=Number(document.getElementById("no").value);
+while(n>0)
+{
+m=n%10;
+k=k+m;
+n=Math.floor(n/10);
+}
+document.getElementById("result").value=k;
+}
+</script>
+</html>

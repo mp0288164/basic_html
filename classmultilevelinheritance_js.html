@@ -1,0 +1,79 @@
+<html>
+<body>
+<p id="result"></p>
+<form action="/action.py" method="GET">
+	<label for="r">Rollno:-</label>
+	<input type="text"  id="r"/><br>
+	
+	<label for="n">Name:-</label>
+	<input type="text"  id="n"/><br>
+
+	<label for="p">Physics:-</label>
+	<input type="text"  id="p"/><br>
+
+	<label for="c">Chemistey:-</label>
+	<input type="text"  id="c"/><br>
+	
+	<label for="m">Maths:-</label>
+	<input type="text"  id="m"/><br>
+	
+	<label for="t">Total:-</label>
+	<input type="text"  id="t"/><br>
+
+	<label for="per">Persantage:-</label>
+	<input type="text"  id="per"/><br>
+	
+	<input type="button" value="submit" id="submit" onclick="mca();"/>
+</form>
+<script>
+class student
+{
+	constructor(r,s)
+	{	
+	this.rollno=r;
+	this.name=s;
+	}
+}
+
+class marks extends student
+{
+	constructor(r,s,p,c,m)
+	{ 
+		super(r,s);
+		this.phy=p;
+		this.che=c;
+		this.maths=m;
+	}
+}
+
+class calculation extends marks
+{
+	constructor(r,s,p,c,m)
+	{
+		super(r,s,p,c,m);
+		 this.total=this.phy+this.che+this.maths;
+	}
+	
+	calculate()
+	{
+	 	 return this.per=this.total/3.0;
+	}
+}
+function mca()
+{
+const  k=new calculation(123,"reena",56,78,90)
+
+document.getElementById("result").innerHTML="Rollno:-"+k.rollno;
+
+document.getElementById("r").value=k.rollno
+document.getElementById("n").value=k.name
+document.getElementById("p").value=k.phy
+document.getElementById("c").value=k.che
+document.getElementById("m").value=k.maths
+document.getElementById("t").value=k.total
+document.getElementById("per").value=k.calculate()
+}
+
+</script>
+</body>
+</html>

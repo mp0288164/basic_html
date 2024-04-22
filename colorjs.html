@@ -1,0 +1,31 @@
+<html>
+<body> 
+<p id="name">asdfgbnm,./swrtghyjkl;zx cvbnm,.</p>
+	<label for="t1"></label>
+	<input  type="text" id="t1" />
+	<select id="clr" onchange="check()">
+		<option value="pink">Pink</option>
+		<option value="blue">Blue</option>
+		<option value="navy">Navy</option>
+		<option value="black">Black</option>
+		<option value="green">Green</option>
+		<option value="orange">Orange</option>
+		<option value="tometo">Tometo</option>
+		<option value="cyan">Cyan</option>
+		<option value="red">Red</option>
+		</select>
+<script>
+ function check()
+	{
+	let n;
+	
+	document.getElementById("result").innerHTML="";
+	n=document.getElementById("clr").value;
+	document.getElementById("t1").Style.backgrounColor=n;
+	document.getElementById("name").Style.BackgrounColor=n;
+	
+	
+	}
+</script>
+</body>
+</html>

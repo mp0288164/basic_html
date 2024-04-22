@@ -1,0 +1,17 @@
+<html>
+<body>
+<label for="f1"></label>
+<input type="text" id="f1"/><span id="s"></span>
+</body>
+<script>
+f1.onblur=function()
+{
+document.getElementById("s").innerHTML="please enter number";
+}
+s1=document.getElementById("s");
+f1.onfocus=function()
+{
+s1.style.display="none";
+}
+</script>
+</html>

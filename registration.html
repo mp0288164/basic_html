@@ -1,0 +1,203 @@
+<html>
+
+<head>
+	<style>
+		h1 {
+			text-align: center;
+		}
+
+		#mydiv {
+			background-color: lightblue;
+			text-align: auto center;
+			margin: auto 100px;
+		}
+
+		.my {
+			margin: auto 20px;
+		}
+
+		label {
+			text-align: left;
+		}
+
+		err. {
+			background-color: red;
+			color: yellow;
+			display: none;
+			height: 20px;
+			padding: 1px 20px;
+		}
+	</style>
+</head>
+<body>
+	<form action="/mypy.py" onsubmit=" return valid();">
+		<div id="mydiv">
+			<h1>Registration From</h1>
+			<label for="sname" class="my">Name</label>
+			<input type="text" id="sname" placeholder="FirstName" onblur="fun1();"/><span id="s"
+				class="err"></span><br><br>
+
+			<label for="fname" class="my">Father`s Name</label>
+			<input type="text" id="fname"  onblur="fun1()"/><span id="f" 			class="err"></span><br>
+
+			<label for="dob" class="my">Enter your DOB</label>
+			<input type="text" id="dob" placeholder="Enter your Date of Birth" 						onblur="fun1()"/><span id="errdob" class="err"></span><br><br>
+			
+			<label class="my">Gender</label>
+			<input type="radio" id="female" name="gen">
+			<label for="female">Female</label>
+			<input type="radio" id="male" name="gen">
+			<label for="male">Male</label>
+			<input type="radio" id="other" name="gen">
+			<label for="other">Other</label><br><br>
+
+			<label for="mobile" class="my">Enter your mobile</label>
+			<input type="text" id="mobile" placeholder="Enter your Mobile Number" 			onblur="fun1()" /><span id="errmob" class="err"></span><br><br>
+
+			<label for="email" class="my">Enter your Email-ID</label>
+			<input type="Email" id="email" placeholder="abc123@gamil.com"
+				pattern="[a-z]{20}[0-9]{8}@gmail.com} " /><br><br>
+
+			<label for="adr" class="my">Address</label>
+			<input type="text" id="adr" placeholder="Address" /><br><br>
+
+			<label for="pin" class="my">pincode</label>
+			<input type="text" id="pin" /><br><br>
+
+
+
+			<label for="cty">country</label>
+			<input list="country" id="cty" />
+			<datalist id="country">
+				<option value="India">
+				<option value="Indonesia">
+				<option value="China">
+				<option value="Pakistan">
+				<option value="Japan">
+				<option value="Iran">
+				<option value="Bangladesh">
+				<option value="Iraq">
+				<option value="Nepal">
+
+				<option value="Israel">
+			</datalist>
+
+			<label for="state">State</label>
+			<input list="state" id="cty" />
+			<datalist id="state">
+				<option value="Madhypradesh">
+				<option value="Uttarpradesh">
+				<option value="Uttrakhand">
+				<option value="Rajsthan">
+				<option value="Gujrat">
+				<option value="Tamilnadu">
+				<option value="Bangla">
+				<option value="Asam">
+				<option value="Mizoram">
+				<option value="Jammbu-Kashmir">
+			</datalist>
+
+			<input type="submit" value="submit" class="my">
+		</div>
+	</form>
+	<script>
+		function valid()
+		 {
+			alert("my");
+			a = document.getElementById("sname");
+			a1 = document.getElementById("s");
+
+			b= document.getElementById("fname");
+			b1 = document.getElementById("f");
+			
+			c= document.getElementById("dob");
+			c1 = document.getElementById("errdob");
+			
+			d=document.getElementById("mobile");
+			d1=document.getElementById("errmob");
+			chr=d.value.length;
+
+			if(d.value=="")
+			{
+			d1.innerHTML="enter mobile number";
+			d1.style.display="inline-block";
+			return false;
+			}
+			else if(!d.value.match(/^[-+]?[0-9]+$/))
+			{
+			d1.style.display="inline-block";
+			d1.innerHTML="fill in number";
+			}
+			else if()
+
+			if (a.value == "")
+			{
+				a1.innerHTML = "name should not blank";
+				a1.style.display = "inline-block";
+
+				
+			}
+
+			if (b.value == "")
+			{
+				b1.innerHTML = "name should not blank";
+				b1.style.display = "inline-block";
+			}
+
+			if(c.value=="")
+			{
+				c1.innerHTML="please enter date of birth";
+				c1.style.display="inline-block";	
+			}
+			return false;
+		
+	
+		}
+		function fun1() 
+		{
+			a = document.getElementById("sname");
+			a1 = document.getElementById("s");
+
+			b= document.getElementById("fname");
+			b1 = document.getElementById("f");
+			
+			c= document.getElementById("dob");
+			c1 = document.getElementById("errdob");
+
+			d=document.getElementById("mobile");
+			d1=document.getElementById("errmob");
+
+			if(d.value!="")
+			{
+			d1.style.display="none";
+
+			}
+			else
+			{
+			
+
+			}
+			
+			if (a.value != "")
+			 {
+				a1.style.display = "none";
+			}
+			
+			if (b.value != "")
+			 {
+				b1.style.display = "none";
+			}
+
+			if(c.value!="")
+			{
+				c1.style.display="none";
+			}
+		}
+
+
+
+
+	</script>
+</body>
+
+</html>

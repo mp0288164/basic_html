@@ -1,0 +1,68 @@
+<html>
+<body><form  action="abc.php" onsubmit=" return hello()">
+	<label for="n">Enter Your Username:-</label>
+	<input type="text" id="n" onblur="fun1(this) " onfocus="fun2(this);"/ ><span id="s"></span><br><br>
+	<label for="p">Password</label>
+	<input type="password" id="p" onblur="fun3(this);" onfocus="fun4(this);"/><span id="p1"></span><br><br>
+	<input type="submit" value="submit" /></form>
+<p id="p"></p>
+</body>
+<script>
+function hello()
+{ 
+
+a1=document.getElementById("n").value;
+
+a2=document.getElementById("p").value;
+if(a1!="" && a2!="")
+{
+return true;
+}
+else{
+return false;
+}
+
+
+}
+function fun1(x)
+{
+a=document.getElementById("n").value;
+if(a=="")
+{
+
+document.getElementById("s").innerHTML="please enter your valid username";
+}
+else{
+document.getElementById("s").style.display="none";
+x.style.background="cyan";
+x.style.color="black";
+}
+}
+function fun2(x)
+{
+x.style.background="pink";
+x.style.color="blue";
+}
+function fun3(x)
+{
+b=document.getElementById("p").value;
+if(b=="")
+{
+
+document.getElementById("p1").innerHTML="please enter your valid password";
+}
+else{
+document.getElementById("p1").style.display="none";
+x.style.background="cyan";
+x.style.color="black";
+}
+}
+function fun4(x)
+{
+x.style.background="pink";
+x.style.color="blue";
+}
+
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.myform
+{
+	background-color: lightblue;
+	color: navy;
+	border: 10px solid white;
+	padding:20px;
+	margin:20px;
+	font-size: 28px;
+}
+#e{ border:20px;background-color:yellow;color:green;padding:10px; font-size:20px}
+#sub:hover{
+	
+	background-color:green;
+	color:white;
+	}
+#pas{ font-size:20px;s}
+</style>
+
+</head>
+<body>
+<form action="/action_page.php">
+	<label for="f1">Enter your First Name</label>
+	<input type="text" id=f1 name="fname" 	class="myform"/><br>
+	<label for="l1">Enter your last Name</label>
+	<input id="l1" name="lname" 	class="myform"/><br>
+	<label for="e">Please enter your email-ID</label>
+	<input type="email" id="e" name="email" placeholder="xxxxxxxxxxxgmail.com"/>
+	<input type="password" value="........." maxlength="8" pattern="{0-9}" id="pas"/>
+	<input type="submit"  id="sub" value="click" formtarget="_blank" formaction="/action_page2.php" />
+	<input type="image" src="pexels-pixabay-268533.jpg" alt="not submit" width="48" height="48" 	formmethod="POST" formenctype="mutipart/form-data"/>
+	
+	
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> find factorial</title>
+<style>
+	body{ background-color:orange; }
+	#mydiv{ background-color:red;
+		margin:140px 400px;
+		padding:30px;}
+	.txt{
+		height:30px;
+		width:180px;
+		
+		border: 4px solid white;
+		border-redius:10px;
+		padding-lefy:10px;
+		font-size:20px;
+		font-family:arial;
+		color:white;
+		}
+	label{height:30px;
+		width:180px;
+		display:inline-block;
+		font-size:20px;
+		font-family:arial;
+		color:white;
+		background-color:tometo; }
+	#submit:hover{
+		border:2px solid white;
+		background-color:darkgreen;
+		color:white;}
+	
+</style>
+</head>
+<body>
+	<div id="mydiv">
+		<label for="no" >Enter the number:-</label>
+		<input type="text" id="no" class="txt"/><br><br>
+		<label for="result" >Factorial</label>
+		<input type="text" id="result" class="txt" disabled/><br><br>
+		<input type="submit" id="submit" onclick="fact()" value="submit" />
+	</div>
+<script>
+function fact()
+{ var n, f=1;
+	n=(document.getElementById("no").value);
+	for (i=n;i>0;i--)
+	{
+	f=f*i;
+	}
+	document.getElementById("result").value=f;
+}
+</script>
+</body>
+</html>
+
+

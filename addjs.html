@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function add()
+{ 
+alert("hello")
+var a,b,c;
+	a=document.getElementById('f1').vlaue;
+	b=document.getElementById('s1').value;
+	c=parseInt(a)+parseInt(b);
+	document.getElementById('result').value=c;
+}
+</script>
+</head>
+<body>
+	<label for="f1">First No.</label>
+	<input type="text" id="f1"/><br><br>
+	<label for="s1">Second No.</label>
+	<input type="text" id="s1"/><br><br>
+	<label for="result">Addition</label>
+	<input type="text" id="result"/><br><br>
+	<button onclick="add()">Click</button>
+</body>
+</html>

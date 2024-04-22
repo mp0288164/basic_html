@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JAVA SCRIPT</title>
+</head>
+<body>
+	<label for="no">Number</label>
+	<input type="text" i="no">
+	<select id="clr" onchange="check();" >
+	<option value="1" >1</option>
+	<option value="2" >2</option>
+	<option value="3" >3</option>
+	<option value="4" >4</option>
+	<option value="5" >5</option>
+	<option value="6" >6</option>
+	<option value="7">7</option>
+	</select>
+<p id="result"></p>
+<script>
+function check()
+	{
+                 var n,m;
+	document.getElementById("result").innerHTML="";
+	n=Number(document.getElementById("clr").value);
+	for(i=1;i<=10;i++)
+	{
+	m=n*i;
+	document.getElementById("result").innerHTML+=m+"<br>";
+	}
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+label<for="no"></label>
+<input type="text" id="no" /><br><br>
+<label for="result"></label>
+<input type="text" id="result"/><br><br>
+<input type="button" onclick="sum();" value="click">
+</body>
+<script>
+function sum()
+{
+var n,m,k=0,a;
+n=Number(document.getElementById("no").value);
+a=n;
+while(a>0)
+{
+m=a%10;
+k=k+m*m*m;
+a=Math.floor(a/10);
+}
+if(n==k)
+{
+document.getElementById("result").value="no is armstrong";
+}
+else
+{
+document.getElementById("result").value="no is not armstrong";
+}
+}
+</script>
+</html>
